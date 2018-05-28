@@ -16,13 +16,13 @@ sudo systemctl status docker | grep docker.service
 #Sudo jog beállítása
 sudo usermod -aG docker $username && echo 'OK'
 
-#Szükséges mappák létrehozása
+#Mappák létrehozása
 cd ~
 mkdir Docker
 cd Docker
 mkdir web
 
-#Dockerfile létrehozása, szerkesztése
+#Dockerfile létrehozás,szerkesztés
 touch Dockerfile
 cat <<EOF> Dockerfile
 FROM nginx
@@ -32,10 +32,10 @@ COPY web /usr/share/nginx/html
 EXPOSE 80 443
 CMD ["nginx", "-g", "daemon off;"]
 EOF
-#HTML file létrehozása, szerkesztése
+#HTML file létrehozás,szerkesztés
 touch web/index.html
 cat <<EOF> web/index.html
-Sikeres vizsga!
+Siker!
 EOF
 #Docker image készítése, futtatása
 cd ~
