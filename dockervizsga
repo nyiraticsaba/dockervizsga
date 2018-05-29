@@ -35,7 +35,7 @@ EOF
 #HTML file létrehozás,szerkesztés
 touch web/index.html
 cat <<EOF> web/index.html
-Siker!
+Vizsga 2018
 EOF
 #Docker image készítése, futtatása
 cd ~
